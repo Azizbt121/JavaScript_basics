@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="Title">
+            <h1>DojoWeather</h1>
+        </div>
+        <div class="options">
+            <button type="button"> Burbank</button>
+            <button type="button"> Chicago</button>
+            <button type="button"> Dallas</button>
+        </div> 
+    </div>
+    <div class="subheader">
+        <div class="subtitle">
+            <h1> San Jose</h1>
+        </div>
+        <div class="temp"> <label for="temperateur">show temperateur in ;
+            <select name="choice" id="tempe">
+                <option value="first">°C</option>
+                <option value="second">°F</option>
+              </select>
+        </label><br>
+    </div>
+    </div>
+    <hr class="divider">
+    <main class="main">
+        <div class="container">
+            <div class="Today">
+                <h1>Today</h1>
+                <img src="some_rain.png">
+                <h3>some rain</h3>
+                <h3 id="todayValues">75°         65°</h3>
+            </div>
+            <div class="Tommorrow">
+                <h1>Tommorrow</h1>
+                <img src="some_sun.png">
+                <h3>some rain</h3>
+                <h3 id="tomorrowValues">80°         66°</h3>
+            </div>
+            <div class="Friday">
+                <h1>Friday</h1>
+                <img src="some_clouds.png">
+                <h3>some rain</h3>
+                <h3 id="fridayValues">69°         61°</h3>
+            </div>
+            <div class="Saturday">
+                <h1>Saturday</h1>
+                <img src="some_sun.png">
+                <h3>some rain</h3>
+                <h3 id="saturdayValues">78°         70°</h3>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" id="cookieFooter">
+        <div class="alert">
+            <label>Stop! cookie time<br></label>
+        </div>
+        <div class="content">
+            <img src="cookie.png" alt="cookie image">
+            <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features, and to analyze our traffic. <a href="#">Read more</a></p>
+            <button type="button" id="acceptBtn">I accept</button>
+        </div>
+        
+    
+    </footer>
+    
+<script src="weather.js"></script>    
+</body>
+</html>

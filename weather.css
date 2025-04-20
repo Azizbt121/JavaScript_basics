@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 20px;
+    background-color: rgb(87, 206, 206);
+    color: white;
+    width: 100%;
+}
+
+
+.options button{
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;  
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.subheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 20px;
+
+}
+.temp{
+    margin-left: 450px;
+}
+
+.divider {
+    border: none;
+    height: 3px;
+    background:black;
+    border-radius: 2px;
+    margin: 30px auto;
+    width: 50%;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 20px;
+    line-height: 1.5;
+    
+}
+
+.container .Today,
+.container .Tommorrow,
+.container .Friday,
+.container .Saturday{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    background-color: rgb(224, 212, 212);
+    flex:1;
+    padding: 10px;
+    margin: 20px;
+    line-height: 1.5;
+}
+
+.container img{
+    
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    object-fit: cover;
+    display: block; /* optional, removes small gaps below image */
+      
+      
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    line-height: 1.2;
+    background-color: rgb(203, 198, 198);
+    border: 2px solid black;
+    width: 720px;
+    margin-bottom: 5px;
+}
+
+.alert{
+    width: 700px;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+.content img { 
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    
+}
+
+.content button {
+    background-color: #3e7ac4;
+    border: 2px solid black;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+
+}
+

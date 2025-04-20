@@ -93,7 +93,6 @@ body{
     border-radius: 50%;
     border: none;
     object-fit: cover;
-    display: block; /* optional, removes small gaps below image */
       
       
 }

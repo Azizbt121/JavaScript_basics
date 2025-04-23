@@ -1,8 +1,10 @@
-var city = document.querySelector(".options button");
+var cities = document.querySelectorAll(".options button");
 
-city.onclick=function(){
-    alert("alert!!!!!")
-}
+cities.forEach(function(button) {
+    button.onclick = function() {
+        alert("alert!!!!!");
+    };
+});
 
 var btn=document.getElementById("acceptBtn")
 
@@ -12,28 +14,31 @@ btn.addEventListener("click", function() {
 });
 
 
+function toCelsius(f) {
+    return Math.round(((f - 32.0) * 5.0 / 9.0));
+}
 
-var tempSelector = document.getElementById("tempe");
-var todDisplay = document.getElementById("todayValues");
-var tomDisplay = document.getElementById("tomorrowValues");
-var firDisplay =document.getElementById("fridayValues");
-var satDisplay =document.getElementById("saturdayValues");
+function toFahrenheit(c) {
+    return Math.round(((c * 9.0 / 5.0) + 32.0));
+}
+
+var tempSelector = document.querySelector("#tempe");
 
 
+tempSelector.addEventListener("change", function () {
+    let selectedOption = tempSelector.value;
+    let tempContainers = document.querySelectorAll("#todayValues, #tomorrowValues, #fridayValues, #saturdayValues");
 
-tempSelector.addEventListener("change", function() {
-    var selected = tempSelector.value;
+    tempContainers.forEach(function (container) {
+        let maxTemp = parseInt(container.querySelector(".max").textContent);
+        let minTemp = parseInt(container.querySelector(".min").textContent);
 
-    if (selected === "first") {  
-        todDisplay.textContent = "24°  18°";
-        tomDisplay.textContent = "27°  19°";
-        firDisplay.textContent = "21°  16°";
-        satDisplay.textContent = "26°  21°";
-
-    } else { 
-        todDisplay.textContent = "75°  65°";
-        tomDisplay.textContent = "80°  66°";
-        firDisplay.textContent = "69°  61°";
-        satDisplay.textContent = "78°  70°";
-    }
+        if (selectedOption == "celsius") {
+            container.querySelector(".max").textContent = toCelsius(maxTemp) + "°C";
+            container.querySelector(".min").textContent = toCelsius(minTemp) + "°C";
+        } else {
+            container.querySelector(".max").textContent = toFahrenheit(maxTemp) + "°C";
+            container.querySelector(".min").textContent = toFahrenheit(minTemp) + "°C";
+        }
+    });
 });

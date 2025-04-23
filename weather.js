@@ -37,8 +37,8 @@ tempSelector.addEventListener("change", function () {
             container.querySelector(".max").textContent = toCelsius(maxTemp) + "°C";
             container.querySelector(".min").textContent = toCelsius(minTemp) + "°C";
         } else {
-            container.querySelector(".max").textContent = toFahrenheit(maxTemp) + "°C";
-            container.querySelector(".min").textContent = toFahrenheit(minTemp) + "°C";
+            container.querySelector(".max").textContent = toFahrenheit(maxTemp) + "°F";
+            container.querySelector(".min").textContent = toFahrenheit(minTemp) + "°F";
         }
     });
 });
